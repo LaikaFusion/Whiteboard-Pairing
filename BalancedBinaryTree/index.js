@@ -18,10 +18,13 @@ class BinaryTreeNode {
 
 let testCase = new BinaryTreeNode(10);
 testCase.insertLeft(9);
-testCase.insertRight(10);
+testCase.insertRight(11);
 
 const checkTree = (rootNode) =>{
-  if(!rootNode.left && !rootNode.right){
+  if(rootNode == null){
+    return false
+  }
+  if(rootNode.left==null && rootNode.right==null){
     return true
   }
   if(checkTree(rootNode.left) && checkTree(rootNode.right) ){
