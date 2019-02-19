@@ -1,14 +1,10 @@
 const rotateImage = arr => {
-  let newArr = [];
   for(i=0; i < arr.length; i++){
-    newArr.push([])
     for (let index = 0; index < arr.length; index++) {
-      newArr[i][index] = arr[index][  arr.length - 1 -i]
-      
+      arr[i][index] = arr[index][  arr.length - 1 -i]
     }
-    
   }
-  return newArr
+  return arr
 };
 
 console.log(rotateImage([
